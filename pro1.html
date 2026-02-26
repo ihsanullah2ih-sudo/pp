@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 90%;
+            height: 10px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+              box-shadow: 2px 2px 25px black;
+
+        }
+        #tow {
+            background-color: red;
+            width: 2%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="one" id="one">
+        <div id="tow" class="tow">
+
+        </div>
+    </div>
+    <input type="button" name="" id="btn" value="btn" class="btn">
+  
+    <div id="box"></div>
+    <script>
+        let jump=0
+        let one=document.getElementById("btn")
+        window.addEventListener("load",function(){  
+               let timer=setInterval(function(){
+                jump++;
+                if (jump <=100){
+                document.getElementById("tow").style.width=jump +"%";
+                    document.getElementById("box").classList.toggle("btn")
+                }else {
+           clearInterval(timer);
+                    window.open("http://127.0.0.1:5500/new.html","_self")
+                }
+            } ,1)
+        })
+
+       
+        // // let input=prompt("hi how are you :please enter your name","your name")
+        // // let msg= `my name is ihsan ${input}`
+        // // console.log(msg)
+        // let msg=confirm("plese enter your information")
+        // let color=msg?"red":"yellow"
+        // let cnf=msg ?"<b style='color:"+color+"'>you can drive a car  please enter your infirmation</b>":"<b style='color:"+color+"'>try agine</b>"
+        // document.getElementById("box").innerHTML=cnf
+        // let n=prompt("enter your age please")
+   
+      
+  
+    </script>
+</body>
+</html>

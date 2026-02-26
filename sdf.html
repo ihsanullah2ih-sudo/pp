@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 90%;
+            height: 10px;
+            text-align: center;
+            background-color: rosybrown;
+
+        }
+        #tow {
+            background-color: red;
+            width: 2%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="one" id="one">
+        <div id="tow" class="tow">
+
+        </div>
+    </div>
+    <input type="button" name="" id="btn" value="btn" class="btn">
+  
+    <div id="box"></div>
+    <script>
+    let jump = 0;
+
+    window.onload = function () {
+
+        let interval = setInterval(function () {
+            jump++;
+
+            if (jump <= 100) {
+                document.getElementById("tow").style.width = jump + "%";
+            } else {
+                clearInterval(interval);
+            window.open("http://127.0.0.1:5500/new.html","_self")
+            }
+
+        }, 1);
+
+    };
+</script>
+</body>
+</html>

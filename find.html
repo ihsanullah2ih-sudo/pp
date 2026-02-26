@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+          
+            .ii{
+                text-align: center;
+                margin-top: 1rem;
+                width: 400px;
+                height: 200px;
+                background-color: rgb(46, 161, 161);
+                text-align: center;
+                align-items: center;
+                margin: auto;
+                  box-shadow: 2px 2px 25px black;
+            }
+            input {
+                width: 200px;
+                background-color: blanchedalmond;
+margin: 0.2rem;
+padding: 10px;
+text-align: center;
+align-items: center;
+margin-top: 1rem;  border-radius: 10px;
+            }
+            .btn {
+                width: 50px;
+                border-radius: 10px;
+                background-color: blue;
+                /* margin-top: 0.5rem; */
+                padding: 1rem;
+                text-align: center;
+             
+            }
+            .box1 {
+    background-color: green;
+    color: white;
+}
+            .box {
+                text-align: center;
+                margin: auto;
+                /* background-color: chocolate; */
+                padding: 2rem;
+          color:rgb(155, 4, 4);
+          display: none;
+            }
+        
+        </style>
+    </head>
+    <body>
+     
+    
+    <div class="ii">
+    
+          <input type="text" name="" id="i" placeholder="enter your name"><br>
+    <input type="number" name="" id="u" placeholder="enter your age"><br>
+ <input type="button" name="" id="btn" value="btn" class="btn" ><br>
+</div>
+     <div id="box" class="box"></div>
+          <div id="box1" class="box1"></div>
+    <script>
+            
+    let btn=document.getElementById("btn");
+
+        btn.addEventListener("click",function(){
+                 let i=document.getElementById("i").value;
+        let u=document.getElementById("u").value
+              let msg;
+            if (u<18)
+msg=`you are not saccessful ${i}`
+if (u>18)
+msg=`you are  seccessful ${i}`
+document.getElementById("box").classList.toggle("box1");
+document.getElementById("box").innerHTML=msg +"    " + "ihsanullah";
+// document.getElementById("box1").classList.toggle("box1");
+document.getElementById("box").style.display="block"
+        })
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,104 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+          
+            .ii{
+                text-align: center;
+                margin-top: 1rem;
+                width: 400px;
+                height: 200px;
+                background-image: url("/bb.jpg");
+               
+                margin: auto;
+                  box-shadow: 3px 2px 25px 4px black;
+            }
+            input {
+                width: 200px;
+                background-color: blanchedalmond;
+margin: 0.2rem;
+padding: 10px;
+text-align: center;
+align-items: center;
+margin-top: 1rem;  border-radius: 10px;
+            }
+            .btn {
+                width: 50px;
+                border-radius: 10px;
+                background-color: blue;
+                /* margin-top: 0.5rem; */
+                padding: 1rem;
+                text-align: center;
+                margin-left: 2rem;
+             
+            }
+            .box1 {
+    /* background-color: green; */
+    color: white;
+}
+            .box {
+                text-align: center;
+                margin: auto;
+                /* background-color: chocolate; */
+                padding: 2rem;
+          color:rgb(155, 4, 4);
+          display: none; width: 400px;
+          margin-top: 2rem;
+            }
+        
+        </style>
+    </head>
+    <body>
+     
+    
+    <div class="ii">
+    
+          <input type="text" name="" id="i" placeholder="enter your name"><br>
+    <input type="number" name="" id="u" placeholder="enter your age"><br>
+ <input type="button" name="" id="btn" value="btn" class="btn" >
+  <input type="button" name="" id="btn2" value="btn1" class="btn1" >
+    <input type="button" name="" id="btn4" value="btn4" class="btn" onclick='alert("welcom to our class")'>
+</div>
+     <div id="box" class="box"></div>
+          <div id="box1" class="box1"></div>
+
+<script>
+let btn = document.querySelector(".btn");
+let box = document.getElementById("box");
+
+btn.addEventListener("click", function () {
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+        return;
+    }
+
+    let i = document.getElementById("i").value;
+    let u = document.getElementById("u").value;
+
+    let msg;
+
+    if (u < 18) {
+        msg = `You are not successful ${i}`;
+    } else {
+        msg = `You are successful ${i}`;
+    }
+
+    box.innerHTML = msg + " ihsanullah";
+    box.style.display = "block";
+});
+
+
+</script>
+<script>
+    let btn2=document.getElementById("btn2")
+    btn2.addEventListener("click", function(){
+ window.open("http://127.0.0.1:5500/pro1.html","_self")
+    })
+   
+</script>
+    </body>
+    </html>
